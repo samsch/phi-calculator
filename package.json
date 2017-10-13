@@ -7,7 +7,8 @@
     "start": "webpack-dev-server -d --open --progress --hot --inline",
     "dev": "webpack -d --watch --progress",
     "build": "rm -rf build && NODE_ENV=production webpack -p --progress",
-    "test": "jest"
+    "test": "jest",
+    "build-demo": "rm -rf build docs && NODE_ENV=production APP_PUBLIC_PATH='/phi-calculator/' webpack -p --progress && mv build docs"
   },
   "keywords": [
     "webpack",
