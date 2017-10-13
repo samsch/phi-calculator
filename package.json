@@ -1,7 +1,7 @@
 {
-  "name": "basic-webpack",
-  "version": "1.1.0-rc.0",
-  "description": "Basic Webpack usage",
+  "name": "phi-calculator",
+  "version": "1.0.0",
+  "description": "Phi Calculator",
   "main": "src/main.js",
   "scripts": {
     "start": "webpack-dev-server -d --open --progress --hot --inline",
@@ -17,6 +17,8 @@
   "author": "Samuel Scheiderich",
   "license": "0BSD",
   "devDependencies": {
+    "@samsch/subscribe-store": "^3.0.0",
+    "@samsch/subscribe-to": "0.0.1",
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.2",

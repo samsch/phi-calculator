@@ -1,47 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import createStore from '@samsch/subscribe-store';
 
-// ### Business logic
-
-// Basic state store, similar to React Component state api. Replace with actual
-// business logic
-
-const initialState = {
-  count: 0,
-};
-
-const store = {
-  state: initialState,
-};
-
-// Can be passed a function or new state to merge in.
-const updateState = update => {
-  const newState = typeof update === 'function' ? update(store.state) : update;
-  store.state = Object.assign({}, store.state, newState);
-  if (store.onUpdate) {
-    // Don't rerender in the same cycle, just in case...
-    setTimeout(() => {
-      store.onUpdate(store.state);
-    }, 0);
-  }
-};
-
-const increment = () => updateState(state => ({ count: state.count + 1 }));
-const decrement = () => updateState(state => ({ count: state.count - 1 }));
-const reset = () => updateState(initialState);
-
-// ### App bootstrap (combine business logic with view.)
+const phiInputStore = createStore({ base: 1 });
+const updateBase = value => phiInputStore.updateState({ base: value });
 
 const appRootElement = document.getElementById('app-root');
 
-const render = state => {
+const render = () => {
   ReactDOM.render(
-    <App state={state} action={{ increment, decrement, reset }} />,
+    <App base={phiInputStore.state.base} updateBase={updateBase} />,
     appRootElement
   );
 };
 
-store.onUpdate = render;
+phiInputStore.subscribe(render);
 
-render(store.state);
+render();

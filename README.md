@@ -1,12 +1,6 @@
-# Boilerplate for Webpack with React and Modern Javascript
+# Phi Calculator
 
-## Features
-
-- Webpack v3
-- Babel loader (JSX for React, ES latest using env preset, dynamic import support)
-- Sass (as the `.scss` file type) and css import loaders, extracted to a new file.
-- eslint (recommended default from v4 with minor changes, and babel parser for non-standard support.)
-- jest (configured to handle style and file imports, import and dynamic import syntax.)
+This is a simple app that lets you input a number, and gives the results for multiplying and dividing by the first ten powers of Phi (the Golden Ratio) as a design (or math) aid.
 
 ## Running this project
 
@@ -19,7 +13,3 @@ Run the development server with `npm start`. This will open the test page in you
 You can also run the Webpack development build and source watcher with `npm run dev`, which will only recompile. (You might do this to use an external server).
 
 You can make a production build of the bundle with `npm run build`.
-
-## Make it your own
-
-`src/main.js` and `src/App.js` contain a basic example app. Replace these with your own app.

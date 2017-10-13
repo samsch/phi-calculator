@@ -6,14 +6,8 @@ import App from './App';
 describe('The App component', () => {
   test('Should match a snapshot render', () => {
     const props = {
-      state: {
-        count: 17,
-      },
-      action: {
-        increment: jest.fn(),
-        decrement: jest.fn(),
-        reset: jest.fn(),
-      },
+      base: 156,
+      updateBase: () => {},
     };
 
     const renderedApp = renderer.create(<App {...props} />);
