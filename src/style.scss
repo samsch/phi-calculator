@@ -1,9 +1,26 @@
 
 $borderColor: gray;
 
-.app {
-  max-width: 800px;
+* {
+  box-sizing: padding-box;
+}
+
+html, body, #app-root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container, .app {
+  height: 100%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.app {
+  width: 800px;
+  max-width: 100%;
 }
 
 h1 {
@@ -38,17 +55,35 @@ h1 {
 }
 
 .base-input {
+  flex: 0 1 210px;
+  min-width: 50px;
   padding: 8px 16px;
   border-radius: 4px;
   font-weight: bold;
 }
 
 .output-container {
+  flex: 1 0 auto;
   display: flex;
   justify-content: space-around;
   justify-content: space-evenly;
 
   li {
     padding: 8px 16px;
+  }
+}
+
+footer {
+  background-color: rgb(34, 34, 34);
+  color: rgb(219, 219, 219);
+  padding: 24px 8px;
+  text-align: center;
+
+  a, :link, :visited {
+    color: rgb(166, 187, 255);
+  }
+
+  a:hover, a:focus, a:active {
+    color: rgb(224, 232, 255);
   }
 }
