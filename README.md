@@ -13,3 +13,7 @@ Run the development server with `npm start`. This will open the test page in you
 You can also run the Webpack development build and source watcher with `npm run dev`, which will only recompile. (You might do this to use an external server).
 
 You can make a production build of the bundle with `npm run build`.
+
+## Live app
+
+The [live app](https://samsch.github.io/phi-calculator/) is hosted with Github pages, so there is no project-specific production server, just the front end assets.
